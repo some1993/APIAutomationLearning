@@ -1,0 +1,20 @@
+{
+  "jobId": 6,
+  "jobTitle": "SDET",
+  "jobDescription": "Automation Tester",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron"
+  ],
+  "project": [
+    {
+      "projectName": "Movie App",
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle"
+      ]
+    }
+  ]
+}

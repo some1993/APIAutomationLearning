@@ -1,0 +1,13 @@
+Feature: To create a new Job entry
+  Use POST /normal/webapi/add to create job entry in the application
+  Background: To set the base URL
+  Given url 'http://localhost:9191'
+
+  Scenario: To create the job entry in JSON Format
+  Given path 'normal/webapi/add'
+    And request {"jobId":4,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]}
+    And headers {Accept: 'application/json', Content-Type: 'application/json'}
+    When method post
+    And status 201
+    And print response
+    And match response.jobId == 4
